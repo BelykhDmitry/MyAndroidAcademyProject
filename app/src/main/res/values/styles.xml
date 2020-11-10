@@ -24,11 +24,13 @@
     <style name="textview_reviewers_appearance">
         <item name="android:textSize">@dimen/text_size_normal</item>
         <item name="android:textColor">@color/gray_storm</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="textview_movie_description_appearance">
         <item name="android:textSize">@dimen/text_size_normal</item>
         <item name="android:textColor">@color/white</item>
+        <item name="android:lineSpacingExtra">4sp</item>
     </style>
 
     <style name="textview_movie_storyline_title_appearance">
@@ -38,6 +40,7 @@
         <item name="android:shadowDx">0</item>
         <item name="android:shadowDy">6</item>
         <item name="android:shadowRadius">12</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="textview_movie_cast_title_appearance">
@@ -52,6 +55,8 @@
     <style name="textview_movie_actor_name_appearance">
         <item name="android:textSize">@dimen/text_size_small</item>
         <item name="android:textColor">@color/white_alto</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="button_menu_back_appearance">

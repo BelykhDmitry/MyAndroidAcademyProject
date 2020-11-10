@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_steel"
+    tools:context=".moviescreen.view.MovieInfoActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_default">
+
+        <ImageView
+            android:id="@+id/iv_movie_poster"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@raw/example_movie_poster" />
+
+        <TextView
+            android:id="@+id/tw_age_restriction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginBottom="@dimen/margin_default"
+            android:textAppearance="@style/textview_age_restriction_appearance"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/iv_movie_poster"
+            android:text="13+" />
+
+        <TextView
+            android:id="@+id/tw_movie_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="12dp"
+            android:textAppearance="@style/textview_movie_title_appearance"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tw_age_restriction"
+            android:text="Avengers: \nEnd Game" />
+
+        <TextView
+            android:id="@+id/tw_movie_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/textview_movie_tag_appearance"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tw_movie_title"
+            android:text="Action, Adventure, Fantasy" />
+
+        <ImageView
+            android:id="@+id/star0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tw_movie_tag"
+            app:srcCompat="@drawable/ic_star_icon_filled" />
+
+        <ImageView
+            android:id="@+id/star1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@id/star0"
+            app:layout_constraintTop_toTopOf="@+id/star0"
+            app:srcCompat="@drawable/ic_star_icon_filled" />
+
+        <ImageView
+            android:id="@+id/star2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@id/star1"
+            app:layout_constraintTop_toTopOf="@+id/star1"
+            app:srcCompat="@drawable/ic_star_icon_filled" />
+
+        <!--    TODO: rating widget    -->
+        <ImageView
+            android:id="@+id/star3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@id/star2"
+            app:layout_constraintTop_toTopOf="@+id/star2"
+            app:srcCompat="@drawable/ic_star_icon_filled" />
+
+        <ImageView
+            android:id="@+id/star4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@id/star3"
+            app:layout_constraintTop_toTopOf="@+id/star3"
+            app:srcCompat="@drawable/ic_star_icon_empty" />
+
+        <TextView
+            android:id="@+id/tw_reviews_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/textview_reviewers_appearance"
+            app:layout_constraintStart_toEndOf="@id/star4"
+            app:layout_constraintTop_toBottomOf="@id/tw_movie_tag"
+            android:text="125 reviews" />
+
+        <TextView
+            android:id="@+id/tw_movie_description_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="24dp"
+            android:textAppearance="@style/textview_movie_storyline_title_appearance"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tw_reviews_count"
+            android:text="Storyline" />
+
+        <TextView
+            android:id="@+id/tw_movie_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_default"
+            android:layout_marginTop="16dp"
+            android:alpha="0.75"
+            android:textAppearance="@style/textview_movie_description_appearance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tw_movie_description_title"
+            android:text="After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos\' actions and restore balance to the universe." />
+
+        <TextView
+            android:id="@+id/tw_movie_cast_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="28dp"
+            android:textAppearance="@style/textview_movie_storyline_title_appearance"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tw_movie_description"
+            android:text="Cast" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rw_actors"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_default"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tw_movie_cast_title"
+            tools:itemCount="4"
+            tools:listitem="@layout/item_actor" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
