@@ -22,6 +22,35 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@raw/example_movie_poster" />
 
+        <ImageView
+            android:id="@+id/iv_movie_poster_mask"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="@id/iv_movie_poster"
+            app:layout_constraintStart_toStartOf="@id/iv_movie_poster"
+            app:layout_constraintTop_toTopOf="@id/iv_movie_poster"
+            app:layout_constraintBottom_toBottomOf="@id/iv_movie_poster"
+            app:srcCompat="@drawable/image_vertical_gradient" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_back"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_default"
+            android:layout_marginTop="40dp"
+            android:alpha="0.5"
+            android:lineSpacingExtra="2sp"
+            android:text="@string/button_back"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:icon="@drawable/ic_back"
+            app:iconPadding="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
         <TextView
             android:id="@+id/tw_age_restriction"
             android:layout_width="wrap_content"
