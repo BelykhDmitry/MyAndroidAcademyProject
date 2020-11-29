@@ -8,7 +8,7 @@
     tools:context=".movies.view.FragmentMoviesList">
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/icon_aim"
+        android:id="@+id/iv_icon_aim"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_default"
@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/ic_aim_16" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/screen_title"
+        android:id="@+id/tv_screen_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -26,12 +26,12 @@
         android:text="@string/movies_list_title"
         android:textAppearance="@style/title_movies_list"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@id/icon_aim"
-        app:layout_constraintStart_toEndOf="@id/icon_aim"
-        app:layout_constraintTop_toTopOf="@id/icon_aim" />
+        app:layout_constraintBottom_toBottomOf="@id/iv_icon_aim"
+        app:layout_constraintStart_toEndOf="@id/iv_icon_aim"
+        app:layout_constraintTop_toTopOf="@id/iv_icon_aim" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_movies_list"
+        android:id="@+id/rv_movies_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="28dp"
@@ -43,7 +43,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/screen_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_screen_title"
         tools:listitem="@layout/item_film"
         tools:itemCount="4" />
 

@@ -5,15 +5,14 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginBottom="12dp"
-    app:cardBackgroundColor="@color/gray_steel"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="8dp">
+    android:background="?attr/selectableItemBackground"
+    app:cardCornerRadius="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/background_item_film"
-        android:padding="1dp">
+        android:padding="2dp">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/iv_film_item"
@@ -37,7 +36,7 @@
             app:srcCompat="@drawable/image_vertical_gradient" />
 
         <androidx.appcompat.widget.AppCompatCheckBox
-            android:id="@+id/iv_like"
+            android:id="@+id/cb_like"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
@@ -45,9 +44,9 @@
             android:minWidth="0dp"
             android:minHeight="0dp"
             android:text="@null"
-            app:layout_constraintBottom_toBottomOf="@id/tw_film_restriction"
+            app:layout_constraintBottom_toBottomOf="@id/tv_film_restriction"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/tw_film_restriction" />
+            app:layout_constraintTop_toTopOf="@id/tv_film_restriction" />
 
         <!--    TODO: rating widget    -->
         <androidx.appcompat.widget.AppCompatImageView
@@ -97,7 +96,7 @@
             app:srcCompat="@drawable/ic_star_icon_inactive_8" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tw_film_restriction"
+            android:id="@+id/tv_film_restriction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -113,7 +112,7 @@
             tools:text="13+" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tw_reviews_count"
+            android:id="@+id/tv_reviews_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="6dp"
@@ -128,7 +127,7 @@
             tools:text="125 reviews" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tw_film_title"
+            android:id="@+id/tv_film_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
@@ -144,7 +143,7 @@
             tools:text="Avengers: End Game" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tw_film_duration"
+            android:id="@+id/tv_film_duration"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
@@ -158,7 +157,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tw_film_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_film_title"
             tools:ignore="SmallSp"
             tools:text="137 min" />
 
