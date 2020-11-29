@@ -1,10 +1,13 @@
 package ru.dmitriibel.myandroidacademyproject.moviescreen.view
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.AppCompatButton
+import ru.dmitriibel.myandroidacademyproject.NavigationListener
 import ru.dmitriibel.myandroidacademyproject.R
 import ru.dmitriibel.myandroidacademyproject.moviescreen.data.MovieScreenData
 
@@ -17,7 +20,19 @@ private const val ARG_PARAM1 = "param1"
  */
 class FragmentMovieInfo : Fragment() {
 
+    private var navigationListener: NavigationListener? = null
     private var screenData: MovieScreenData? = null
+    private lateinit var backButton: AppCompatButton
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        navigationListener = context as? NavigationListener
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        navigationListener = null
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +44,18 @@ class FragmentMovieInfo : Fragment() {
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
-    ): View? = inflater.inflate(R.layout.fragment_movie_info, container, false)
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_movie_info, container, false)
+        backButton = view.findViewById(R.id.button_back)
+        return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        backButton.setOnClickListener { navigationListener?.onBackPressed() }
+    }
+
+
 
     companion object {
         /**
