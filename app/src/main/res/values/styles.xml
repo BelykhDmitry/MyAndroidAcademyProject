@@ -64,4 +64,14 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
+<!--    TODO: RatingBar customization  -->
+    <style name="FilmRatingBar" parent="Widget.AppCompat.RatingBar">
+        <item name="android:progressDrawable">@drawable/progress_item_film_rating</item>
+        <item name="android:indeterminateDrawable">@drawable/progress_item_film_rating</item>
+        <item name="colorControlActivated">#FF3365</item>
+        <item name="colorControlNormal">#6D6D80</item>
+        <item name="android:numStars">5</item>
+        <item name="android:stepSize">1</item>
+    </style>
+
 </resources>
