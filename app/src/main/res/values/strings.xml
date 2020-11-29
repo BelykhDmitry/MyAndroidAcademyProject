@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">MyAndroidAcademyProject</string>
     <string name="button_back">Back</string>
+    <string name="movies_list_title">Movies list</string>
 </resources>

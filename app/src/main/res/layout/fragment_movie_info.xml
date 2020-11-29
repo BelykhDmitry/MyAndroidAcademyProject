@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray_steel"
-    tools:context=".moviescreen.view.MovieInfoActivity">
+    android:background="@color/gray_steel">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -134,7 +133,7 @@
             app:srcCompat="@drawable/ic_star_icon_empty" />
 
         <TextView
-            android:id="@+id/tw_reviews_count"
+            android:id="@+id/tv_reviews_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -152,7 +151,7 @@
             android:layout_marginTop="24dp"
             android:textAppearance="@style/textview_movie_storyline_title_appearance"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tw_reviews_count"
+            app:layout_constraintTop_toBottomOf="@id/tv_reviews_count"
             android:text="Storyline" />
 
         <TextView

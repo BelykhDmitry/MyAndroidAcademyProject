@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:background="?attr/selectableItemBackground"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_item_film"
+        android:padding="2dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_film_item"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:scaleType="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@raw/movie_background_example" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_film_item_mask"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@id/iv_film_item"
+            app:layout_constraintEnd_toEndOf="@id/iv_film_item"
+            app:layout_constraintStart_toStartOf="@id/iv_film_item"
+            app:layout_constraintTop_toTopOf="@id/iv_film_item"
+            app:srcCompat="@drawable/image_vertical_gradient" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/cb_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:button="@drawable/checkbox_like_btn"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:text="@null"
+            app:layout_constraintBottom_toBottomOf="@id/tv_film_restriction"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_film_restriction" />
+
+        <!--    TODO: rating widget    -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/star0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_film_item"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_star_icon_8" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/star1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            app:layout_constraintStart_toEndOf="@id/star0"
+            app:layout_constraintTop_toTopOf="@+id/star0"
+            app:srcCompat="@drawable/ic_star_icon_8" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/star2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            app:layout_constraintStart_toEndOf="@id/star1"
+            app:layout_constraintTop_toTopOf="@+id/star1"
+            app:srcCompat="@drawable/ic_star_icon_8" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/star3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            app:layout_constraintStart_toEndOf="@id/star2"
+            app:layout_constraintTop_toTopOf="@+id/star2"
+            app:srcCompat="@drawable/ic_star_icon_8" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/star4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            app:layout_constraintStart_toEndOf="@id/star3"
+            app:layout_constraintTop_toTopOf="@+id/star3"
+            app:srcCompat="@drawable/ic_star_icon_inactive_8" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_film_restriction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/background_film_item_restriction"
+            android:gravity="center"
+            android:padding="0dp"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="13+" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_reviews_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:lineSpacingExtra="3sp"
+            android:textColor="#6D6D80"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/star4"
+            app:layout_constraintStart_toEndOf="@id/star4"
+            app:layout_constraintTop_toTopOf="@+id/star4"
+            tools:ignore="SmallSp"
+            tools:text="125 reviews" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_film_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="4sp"
+            android:textColor="#ECECEC"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_film_item"
+            tools:text="Avengers: End Game" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_film_duration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="3sp"
+            android:textAllCaps="true"
+            android:textColor="#565665"
+            android:textSize="8sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_film_title"
+            tools:ignore="SmallSp"
+            tools:text="137 min" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
