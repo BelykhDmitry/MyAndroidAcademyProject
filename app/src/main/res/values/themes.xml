@@ -14,7 +14,7 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="MovieInfo" parent="Theme.MyAndroidAcademyProject">
+    <style name="MainActivity" parent="Theme.MyAndroidAcademyProject">
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:windowTranslucentStatus">true</item>
     </style>
