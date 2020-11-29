@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- TODO: Style naming -->
+    <style name="textview_age_restriction_appearance">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="textview_movie_title_appearance">
+        <item name="android:textSize">@dimen/text_size_title_40</item>
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="android:textColor">@color/white_gallery</item>
+        <item name="android:shadowColor">@color/black_transparent_80</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">6</item>
+        <item name="android:shadowRadius">12</item>
+    </style>
+
+    <style name="textview_movie_tag_appearance">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textColor">@color/red_radical</item>
+    </style>
+
+    <style name="textview_reviewers_appearance">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textColor">@color/gray_storm</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="textview_movie_description_appearance">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+    </style>
+
+    <style name="textview_movie_storyline_title_appearance">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:textColor">@color/white_gallery</item>
+        <item name="android:shadowColor">@color/black_transparent_80</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">6</item>
+        <item name="android:shadowRadius">12</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="textview_movie_cast_title_appearance">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="android:shadowColor">@color/black_transparent_80</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">6</item>
+        <item name="android:shadowRadius">12</item>
+    </style>
+
+    <style name="textview_movie_actor_name_appearance">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/white_alto</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="button_menu_back_appearance">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+<!--    TODO: RatingBar customization  -->
+    <style name="FilmRatingBar" parent="Widget.AppCompat.RatingBar">
+        <item name="android:progressDrawable">@drawable/progress_item_film_rating</item>
+        <item name="android:indeterminateDrawable">@drawable/progress_item_film_rating</item>
+        <item name="colorControlActivated">#FF3365</item>
+        <item name="colorControlNormal">#6D6D80</item>
+        <item name="android:numStars">5</item>
+        <item name="android:stepSize">1</item>
+    </style>
+
+</resources>
